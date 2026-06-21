@@ -1,0 +1,1577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --off-white: #FDFBF7;
+    --warm-white: #F9F6F0;
+    --cream: #F5F0E8;
+    --paper: #F0EBE0;
+    --dark-charcoal: #1A1410;
+    --soft-black: #2C241E;
+    --warm-gray: #5C534A;
+    --mid-gray: #8A7F74;
+    --light-gray: #C4BDB5;
+    --pale-gray: #E8E2DA;
+}
+
+/* ----- NAVIGATION ----- */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--paper);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--light-gray);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: var(--dark-charcoal);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.2rem;
+}
+
+.nav-links a {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--mid-gray);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--dark-charcoal);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--dark-charcoal);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-cta button {
+    padding: 10px 28px;
+    background-color: var(--dark-charcoal);
+    color: var(--off-white);
+    border: none;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-cta button:hover {
+    background-color: var(--soft-black);
+    transform: scale(1.05);
+}
+
+/* ----- HERO SECTION ----- */
+.hero {
+    min-height: 100vh;
+    background: 
+        linear-gradient(rgba(26, 20, 16, 0.65), rgba(26, 20, 16, 0.65)),
+        url(/assets/images/hero-bg.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 8rem 2rem 2rem 10rem;
+    margin-top: 0;
+}
+
+.hero-container {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.hero-container h1 {
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4.5rem;
+    color: var(--off-white);
+    line-height: 1.1;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-container p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: var(--pale-gray);
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-cta .menu-btn {
+    padding: 14px 40px;
+    background-color: var(--off-white);
+    color: var(--dark-charcoal);
+    border: none;
+    border-radius: 2px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-cta .menu-btn:hover {
+    background-color: var(--cream);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta .story-btn {
+    padding: 14px 32px;
+    background: transparent;
+    color: var(--off-white);
+    border: 2px solid var(--off-white);
+    border-radius: 2px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-cta .story-btn:hover {
+    background-color: var(--off-white);
+    color: var(--dark-charcoal);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--paper);
+    padding: 5rem 2rem;
+    gap: 2rem;
+}
+
+.heading {
+    font-family: "Rubik Bubbles", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 2.8rem;
+    color: var(--dark-charcoal);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.heading span {
+    color: var(--warm-gray);
+    font-size: 1rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    display: block;
+    margin-top: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 4rem;
+    padding: 1rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.8rem;
+    flex: 1;
+}
+
+.about-content p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--warm-gray);
+    margin: 0;
+}
+
+.about-content p:last-of-type {
+    font-weight: 400;
+    color: var(--dark-charcoal);
+    font-size: 1.2rem;
+}
+
+.about-content .highlight {
+    font-weight: 500;
+    color: var(--dark-charcoal);
+}
+
+.about-img {
+    background-image: url(/assets/images/owner-img.jfif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 1;
+    min-height: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(26, 20, 16, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(26, 20, 16, 0.25);
+}
+
+/* Small decorative line under heading */
+.heading-line {
+    width: 60px;
+    height: 3px;
+    background: var(--mid-gray);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.coffee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--off-white);
+    padding: 5rem 2rem 6rem;
+    gap: 2.5rem;
+}
+
+.coffee .heading {
+    font-family: "Rubik Bubbles", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 2.8rem;
+    color: var(--dark-charcoal);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.coffee .heading::after {
+    content: '☕';
+    display: block;
+    font-size: 1.8rem;
+    margin-top: 0.3rem;
+}
+
+.coffee-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.coffee-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--paper);
+    border-radius: 12px;
+    padding: 1.5rem 1rem 1.8rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(26, 20, 16, 0.06);
+    border: 1px solid var(--pale-gray);
+}
+
+.coffee-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(26, 20, 16, 0.12);
+    border-color: var(--light-gray);
+}
+
+.coffee-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.4s ease;
+}
+
+.coffee-item:hover .coffee-img {
+    transform: scale(1.03);
+}
+
+.coffee-title {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--dark-charcoal);
+    text-align: center;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.5px;
+}
+
+.coffee-price {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--warm-gray);
+    text-align: center;
+}
+
+.coffee-price::before {
+    content: '$';
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+
+.coffee-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.coffee-cta button {
+    padding: 16px 48px;
+    background-color: var(--dark-charcoal);
+    color: var(--off-white);
+    border: none;
+    border-radius: 2px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.coffee-cta button::before {
+    content: '→';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    opacity: 0;
+}
+
+.coffee-cta button:hover {
+    background-color: var(--soft-black);
+    transform: scale(1.05);
+    padding-right: 60px;
+    box-shadow: 0 4px 20px rgba(26, 20, 16, 0.2);
+}
+
+.coffee-cta button:hover::before {
+    right: 24px;
+    opacity: 1;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cream);
+    padding: 5rem 2rem 6rem;
+    gap: 2.5rem;
+}
+
+.info .heading {
+    font-family: "Rubik Bubbles", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 2.8rem;
+    color: var(--dark-charcoal);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.info .heading::after {
+    content: '📍';
+    display: block;
+    font-size: 1.8rem;
+    margin-top: 0.3rem;
+}
+
+.info-container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 0 1rem;
+}
+
+/* ----- LEFT COLUMN: Location & Map ----- */
+.info-location {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: var(--off-white);
+    padding: 1.8rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(26, 20, 16, 0.06);
+    border: 1px solid var(--pale-gray);
+}
+
+.info-card h3 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 0.8rem;
+}
+
+.info-card p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--warm-gray);
+    margin-bottom: 0.8rem;
+}
+
+.map-link {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--dark-charcoal);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 2px;
+}
+
+.map-link:hover {
+    color: var(--warm-gray);
+    border-bottom-color: var(--dark-charcoal);
+    transform: translateX(4px);
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(26, 20, 16, 0.08);
+    border: 1px solid var(--pale-gray);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+/* ----- RIGHT COLUMN: Hours & Contact ----- */
+.info-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hours-card {
+    background: var(--off-white);
+    padding: 1.8rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(26, 20, 16, 0.06);
+    border: 1px solid var(--pale-gray);
+}
+
+.hours-card h3 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 1.2rem;
+}
+
+.hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.hour-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--pale-gray);
+}
+
+.hour-item:last-child {
+    border-bottom: none;
+}
+
+.hour-item .day {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--dark-charcoal);
+}
+
+.hour-item .time {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    color: var(--warm-gray);
+}
+
+.hour-item.highlight {
+    background: var(--cream);
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    border-bottom: none;
+    margin-top: 0.3rem;
+}
+
+.hour-item.highlight .day {
+    font-weight: 500;
+    color: var(--dark-charcoal);
+}
+
+.hour-item.highlight .time {
+    font-weight: 400;
+    color: var(--dark-charcoal);
+}
+
+.hours-note {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--pale-gray);
+}
+
+.hours-note p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    color: var(--mid-gray);
+    font-style: italic;
+}
+
+/* ----- Contact Mini ----- */
+.contact-mini {
+    background: var(--off-white);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(26, 20, 16, 0.06);
+    border: 1px solid var(--pale-gray);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--warm-gray);
+}
+
+.contact-item span:first-child {
+    font-size: 1.2rem;
+}
+
+.coffee-cta button:active {
+    transform: scale(0.95);
+}
+
+.footer {
+    background-color: var(--dark-charcoal);
+    color: var(--pale-gray);
+    padding: 4rem 2rem 0;
+    margin-top: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ----- Brand Column ----- */
+.footer-brand .footer-logo {
+    font-family: "Rubik Bubbles", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--off-white);
+    margin-bottom: 0.8rem;
+}
+
+.footer-brand p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--mid-gray);
+}
+
+/* ----- Link Columns ----- */
+.footer-links h4,
+.footer-hours h4,
+.footer-social h4 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--off-white);
+    margin-bottom: 1.2rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-links a {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--mid-gray);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--off-white);
+    transform: translateX(4px);
+}
+
+/* ----- Hours Column ----- */
+.footer-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-hours p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--mid-gray);
+    margin: 0;
+}
+
+.footer-hours p span {
+    color: var(--light-gray);
+    font-weight: 400;
+}
+
+/* ----- Social Column ----- */
+.footer-social .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--mid-gray);
+}
+
+.footer-social .social-icons a:hover {
+    background: var(--off-white);
+    color: var(--dark-charcoal);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ----- Bottom Bar ----- */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.footer-bottom p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: var(--mid-gray);
+    margin: 0;
+}
+
+.footer-bottom p:last-child {
+    color: var(--warm-gray);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* ----- BASE FIX: Prevent overflow on all devices ----- */
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+img,
+iframe,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ----- TABLET (1024px and below) ----- */
+@media (max-width: 1024px) {
+    /* Navigation */
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 8rem 2rem 2rem 4rem;
+    }
+
+    .hero-container h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-container p {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    .hero-container {
+        max-width: 100%;
+    }
+
+    /* About */
+    .about-container {
+        gap: 2.5rem;
+        padding: 0;
+    }
+
+    .heading {
+        font-size: 2.4rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .about-img {
+        min-height: 350px;
+    }
+
+    /* Coffee */
+    .coffee-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .coffee .heading {
+        font-size: 2.4rem;
+    }
+
+    .coffee-container {
+        padding: 0;
+    }
+
+    /* Info */
+    .info .heading {
+        font-size: 2.4rem;
+    }
+
+    .info-container {
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .map-container iframe {
+        height: 280px;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        padding: 0 0 2rem 0;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer {
+        padding: 3rem 1.5rem 0;
+    }
+}
+
+/* ----- MOBILE LANDSCAPE / SMALL TABLET (768px and below) ----- */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        padding: 0.8rem 1.2rem;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        padding-top: 0.5rem;
+        border-top: 1px solid var(--light-gray);
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 0.65rem;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-cta button {
+        padding: 6px 16px;
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 6rem 1.2rem 2rem 1.2rem;
+        align-items: center;
+        text-align: center;
+        min-height: 90vh;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-container {
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+        gap: 1.2rem;
+    }
+
+    .hero-container h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-container p {
+        font-size: 1rem;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-cta {
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        gap: 0.8rem;
+    }
+
+    .hero-cta .menu-btn,
+    .hero-cta .story-btn {
+        padding: 10px 24px;
+        font-size: 0.75rem;
+        flex: 1;
+        min-width: 120px;
+        max-width: 200px;
+    }
+
+    /* About */
+    .about {
+        padding: 3rem 1.2rem;
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-content {
+        align-items: center;
+        text-align: center;
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-content p {
+        text-align: center;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+    .about-content p:last-of-type {
+        font-size: 1.05rem;
+    }
+
+    .about-img {
+        min-height: 280px;
+        width: 100%;
+        max-width: 100%;
+        order: 1;
+    }
+
+    .heading {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    .heading-line {
+        width: 50px;
+    }
+
+    /* Coffee */
+    .coffee {
+        padding: 3rem 1.2rem 4rem;
+        gap: 1.8rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .coffee .heading {
+        font-size: 2rem;
+    }
+
+    .coffee .heading::after {
+        font-size: 1.4rem;
+    }
+
+    .coffee-container {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .coffee-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .coffee-item {
+        padding: 1rem 0.8rem 1.2rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .coffee-img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .coffee-title {
+        font-size: 0.95rem;
+    }
+
+    .coffee-price {
+        font-size: 0.85rem;
+    }
+
+    .coffee-cta {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .coffee-cta button {
+        padding: 12px 32px;
+        font-size: 0.75rem;
+        max-width: 100%;
+    }
+
+    /* Info */
+    .info {
+        padding: 3rem 1.2rem 4rem;
+        gap: 1.8rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info .heading {
+        font-size: 2rem;
+    }
+
+    .info .heading::after {
+        font-size: 1.4rem;
+    }
+
+    .info-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info-location {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info-hours {
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info-card,
+    .hours-card,
+    .contact-mini {
+        padding: 1.2rem 1.2rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info-card p {
+        font-size: 0.95rem;
+    }
+
+    .hour-item .day {
+        font-size: 0.85rem;
+    }
+
+    .hour-item .time {
+        font-size: 0.85rem;
+    }
+
+    .contact-mini {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .map-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .map-container iframe {
+        height: 220px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2.5rem 1.2rem 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        padding: 0 0 1.5rem 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-brand {
+        grid-column: 1;
+    }
+
+    .footer-brand .footer-logo {
+        font-size: 1.2rem;
+    }
+
+    .footer-brand p {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.8rem 1.5rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+
+    .footer-hours p {
+        font-size: 0.85rem;
+    }
+
+    .footer-social .social-icons {
+        gap: 0.8rem;
+    }
+
+    .footer-social .social-icons a {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+        gap: 0.3rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-bottom p {
+        font-size: 0.7rem;
+    }
+}
+
+/* ----- MOBILE PORTRAIT (480px and below) ----- */
+@media (max-width: 480px) {
+    /* Navigation */
+    nav {
+        padding: 0.5rem 0.8rem;
+        gap: 0.4rem;
+    }
+
+    .logo {
+        font-size: 0.95rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+        padding-top: 0.4rem;
+    }
+
+    .nav-links a {
+        font-size: 0.55rem;
+        letter-spacing: 0.3px;
+    }
+
+    .nav-cta button {
+        padding: 5px 12px;
+        font-size: 0.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 5rem 0.8rem 1.5rem 0.8rem;
+        min-height: 80vh;
+    }
+
+    .hero-container h1 {
+        font-size: 2rem;
+    }
+
+    .hero-container p {
+        font-size: 0.9rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.6rem;
+    }
+
+    .hero-cta .menu-btn,
+    .hero-cta .story-btn {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 0.7rem;
+        flex: none;
+    }
+
+    /* About */
+    .about {
+        padding: 2.5rem 0.8rem;
+        gap: 1.2rem;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+
+    .heading-line {
+        width: 35px;
+        height: 2px;
+    }
+
+    .about-content {
+        gap: 1rem;
+    }
+
+    .about-content p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .about-content p:last-of-type {
+        font-size: 0.9rem;
+    }
+
+    .about-img {
+        min-height: 200px;
+        border-radius: 6px;
+    }
+
+    /* Coffee */
+    .coffee {
+        padding: 2.5rem 0.8rem 3.5rem;
+        gap: 1.5rem;
+    }
+
+    .coffee .heading {
+        font-size: 1.6rem;
+    }
+
+    .coffee .heading::after {
+        font-size: 1.2rem;
+    }
+
+    .coffee-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+    }
+
+    .coffee-item {
+        padding: 0.6rem 0.4rem 1rem;
+        border-radius: 8px;
+    }
+
+    .coffee-title {
+        font-size: 0.75rem;
+        letter-spacing: 0.3px;
+    }
+
+    .coffee-price {
+        font-size: 0.7rem;
+    }
+
+    .coffee-price::before {
+        font-size: 0.6rem;
+    }
+
+    .coffee-img {
+        border-radius: 4px;
+        margin-bottom: 0.4rem;
+    }
+
+    .coffee-cta button {
+        padding: 10px 20px;
+        font-size: 0.65rem;
+        letter-spacing: 1.2px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Info */
+    .info {
+        padding: 2.5rem 0.8rem 3.5rem;
+        gap: 1.5rem;
+    }
+
+    .info .heading {
+        font-size: 1.6rem;
+    }
+
+    .info .heading::after {
+        font-size: 1.2rem;
+    }
+
+    .info-card,
+    .hours-card,
+    .contact-mini {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .info-card h3,
+    .hours-card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-card p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .map-link {
+        font-size: 0.75rem;
+    }
+
+    .map-container iframe {
+        height: 180px;
+    }
+
+    .hour-item {
+        padding: 0.3rem 0;
+    }
+
+    .hour-item .day {
+        font-size: 0.75rem;
+    }
+
+    .hour-item .time {
+        font-size: 0.7rem;
+    }
+
+    .hour-item.highlight {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .hours-note p {
+        font-size: 0.7rem;
+    }
+
+    .contact-item {
+        font-size: 0.75rem;
+        gap: 0.3rem;
+    }
+
+    .contact-item span:first-child {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 0.8rem 0;
+    }
+
+    .footer-container {
+        gap: 1.2rem;
+        padding: 0 0 1rem 0;
+    }
+
+    .footer-brand .footer-logo {
+        font-size: 1rem;
+    }
+
+    .footer-brand p {
+        font-size: 0.8rem;
+    }
+
+    .footer-links h4,
+    .footer-hours h4,
+    .footer-social h4 {
+        font-size: 0.7rem;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.8px;
+    }
+
+    .footer-links a {
+        font-size: 0.75rem;
+    }
+
+    .footer-hours p {
+        font-size: 0.75rem;
+    }
+
+    .footer-social .social-icons a {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.6rem;
+    }
+}
+
+/* ----- EXTRA SMALL (360px and below) ----- */
+@media (max-width: 360px) {
+    .hero-container h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-container p {
+        font-size: 0.8rem;
+    }
+
+    .coffee-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.4rem;
+    }
+
+    .coffee-item {
+        padding: 0.4rem 0.3rem 0.8rem;
+    }
+
+    .coffee-title {
+        font-size: 0.65rem;
+    }
+
+    .coffee-price {
+        font-size: 0.6rem;
+    }
+
+    .heading {
+        font-size: 1.4rem;
+    }
+
+    .footer-social .social-icons a {
+        width: 28px;
+        height: 28px;
+        font-size: 0.7rem;
+    }
+
+    .nav-links a {
+        font-size: 0.5rem;
+    }
+}
+
+/* ----- UTILITY: Fix for very tall screens ----- */
+@media (min-height: 900px) {
+    .hero {
+        min-height: 80vh;
+    }
+}
+
+/* ----- UTILITY: Touch device hover fix ----- */
+@media (hover: none) {
+    .coffee-item:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(26, 20, 16, 0.06);
+    }
+
+    .coffee-item:hover .coffee-img {
+        transform: none;
+    }
+
+    .about-img:hover {
+        transform: none;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .coffee-cta button::before {
+        display: none;
+    }
+
+    .coffee-cta button:hover {
+        padding-right: 48px;
+        transform: none;
+    }
+}

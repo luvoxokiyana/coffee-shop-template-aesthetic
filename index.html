@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Coffee Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">The Coffee Shop</div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Events</a>
+        <a href="#">Coffee</a>
+      </div>
+      <div class="nav-cta">
+        <button>Order Now</button>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="hero-container">
+        <h1>The Coffee Shop</h1>
+        <p>Life's too short for bad coffee. Let's fix that</p>
+        <div class="hero-cta">
+          <button class="menu-btn">View Menu</button>
+          <button class="story-btn">Our Story →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="heading">About Us</div>
+      <div class="heading-line"></div>
+      <div class="about-container">
+        <div class="about-content">
+          <p>
+            At The Coffee Shop, we believe coffee is more than just a morning
+            ritual—it's a moment of connection. Born from a love for rich
+            aromas, slow mornings, and the hum of good conversation, we set out
+            to create a space where everyone feels at home.
+          </p>
+          <p>
+            We source our beans from small-batch roasters who care as much about
+            quality as we do. Every cup is brewed with intention, served with a
+            smile, and enjoyed in a space that feels like an extension of your
+            living room. Whether you're here for your daily dose of caffeine or
+            a quiet escape from the chaos, we're glad you're here.
+          </p>
+        </div>
+        <div
+          class="about-img"
+          role="img"
+          aria-label="Our coffee shop owner"
+        ></div>
+      </div>
+    </section>
+
+    <section class="coffee">
+      <div class="heading">Our Coffee</div>
+      <div class="heading-line"></div>
+      <div class="coffee-container">
+        <div class="coffee-grid">
+          <!-- item 1-->
+          <div class="coffee-item">
+            <img class="coffee-img" src="/assets/images/item-1.jfif" alt="" />
+            <div class="coffee-title">Iced Latte</div>
+            <div class="coffee-price">$5.00</div>
+          </div>
+
+          <!-- item 2-->
+          <div class="coffee-item">
+            <img class="coffee-img" src="/assets/images/item-2.jfif" alt="" />
+            <div class="coffee-title">Matcha Tonic</div>
+            <div class="coffee-price">$6.50</div>
+          </div>
+
+          <!-- item 3-->
+          <div class="coffee-item">
+            <img class="coffee-img" src="/assets/images/item-3.jfif" alt="" />
+            <div class="coffee-title">Stawberry Latte</div>
+            <div class="coffee-price">$6.00</div>
+          </div>
+
+          <!-- item 4-->
+          <div class="coffee-item">
+            <img class="coffee-img" src="/assets/images/item-4.jfif" alt="" />
+            <div class="coffee-title">Cappuccino Chill</div>
+            <div class="coffee-price">$5.50</div>
+          </div>
+        </div>
+        <div class="coffee-cta">
+          <button>Discover Your Flavour</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="info">
+      <div class="heading">Visit Us</div>
+
+      <div class="info-container">
+        <!-- Left Column: Location & Map -->
+        <div class="info-location">
+          <div class="info-card">
+            <h3>Find Us</h3>
+            <p>123 Coffee Lane,<br />Melbourne, VIC 3000,<br />Australia</p>
+            <a
+              href="https://maps.google.com/maps?q=123+Coffee+Lane+Melbourne"
+              target="_blank"
+              class="map-link"
+            >
+              Get Directions →
+            </a>
+          </div>
+
+          <!-- Google Maps Embed -->
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509414!2d144.9537353153167!3d-37.81627997975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f4e6b7%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1700000000000"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Right Column: Opening Hours -->
+        <div class="info-hours">
+          <div class="hours-card">
+            <h3>🕐 Opening Hours</h3>
+
+            <div class="hours-grid">
+              <div class="hour-item">
+                <span class="day">Monday – Friday</span>
+                <span class="time">6:30 AM – 6:00 PM</span>
+              </div>
+
+              <div class="hour-item">
+                <span class="day">Saturday</span>
+                <span class="time">7:30 AM – 7:00 PM</span>
+              </div>
+
+              <div class="hour-item">
+                <span class="day">Sunday</span>
+                <span class="time">8:00 AM – 5:00 PM</span>
+              </div>
+
+              <div class="hour-item highlight">
+                <span class="day">Public Holidays</span>
+                <span class="time">9:00 AM – 3:00 PM</span>
+              </div>
+            </div>
+
+            <div class="hours-note">
+              <p>☕ Last orders 30 minutes before closing</p>
+            </div>
+          </div>
+
+          <!-- Quick Contact Info -->
+          <div class="contact-mini">
+            <div class="contact-item">
+              <span><i class="fa-solid fa-phone"></i></span>
+              <span>(03) 1234 5678</span>
+            </div>
+            <div class="contact-item">
+              <span><i class="fa-regular fa-envelope"></i></span>
+              <span>hello@thecoffeeshop.com</span>
+            </div>
+            <div class="contact-item">
+              <span><i class="fa-brands fa-chrome"></i></span>
+              <span>@thecoffeeshop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: Brand -->
+        <div class="footer-brand">
+          <div class="footer-logo">The Coffee Shop</div>
+          <p>Life's too short for bad coffee.<br />Let's fix that.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#">Home</a>
+          <a href="#">Menu</a>
+          <a href="#">Events</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <!-- Column 3: Hours -->
+        <div class="footer-hours">
+          <h4>Opening Hours</h4>
+          <p><span>Mon – Fri:</span> 6:30 AM – 6:00 PM</p>
+          <p><span>Sat:</span> 7:30 AM – 7:00 PM</p>
+          <p><span>Sun:</span> 8:00 AM – 5:00 PM</p>
+        </div>
+
+        <!-- Column 4: Social -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Twitter"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="#" aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Coffee Shop. All rights reserved.</p>
+        <p>Crafted with ☕ & ❤️</p>
+      </div>
+    </footer>
+  </body>
+</html>
