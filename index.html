@@ -16,6 +16,86 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-container">
+      <div class="latte-art-loader">
+        <svg viewBox="0 0 200 200" class="art-canvas">
+          <!-- Cup base -->
+          <ellipse
+            class="cup-base"
+            cx="100"
+            cy="160"
+            rx="65"
+            ry="15"
+            fill="var(--light-gray)"
+            opacity="0.3"
+          />
+
+          <!-- Coffee surface -->
+          <ellipse
+            class="coffee-surface"
+            cx="100"
+            cy="110"
+            rx="55"
+            ry="20"
+            fill="var(--dark-charcoal)"
+            opacity="0.2"
+          />
+
+          <!-- Latte art - Leaf -->
+          <path
+            class="art-stroke leaf-main"
+            d="M100,130 C80,110 70,85 100,70 C130,85 120,110 100,130"
+            fill="none"
+            stroke="var(--dark-charcoal)"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-dasharray="200"
+            stroke-dashoffset="200"
+          />
+
+          <!-- Latte art - Small leaves -->
+          <path
+            class="art-stroke leaf-small-1"
+            d="M95,95 C80,80 75,70 85,65"
+            fill="none"
+            stroke="var(--dark-charcoal)"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-dasharray="50"
+            stroke-dashoffset="50"
+          />
+
+          <path
+            class="art-stroke leaf-small-2"
+            d="M105,95 C120,80 125,70 115,65"
+            fill="none"
+            stroke="var(--dark-charcoal)"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-dasharray="50"
+            stroke-dashoffset="50"
+          />
+
+          <!-- Heart center -->
+          <path
+            class="art-stroke heart-center"
+            d="M100,110 C95,95 85,95 85,105 C85,115 100,125 100,125 C100,125 115,115 115,105 C115,95 105,95 100,110"
+            fill="none"
+            stroke="var(--dark-charcoal)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-dasharray="100"
+            stroke-dashoffset="100"
+          />
+        </svg>
+      </div>
+      <p class="art-text">Creating your masterpiece...</p>
+      <div class="art-dots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
   <body>
     <nav>
       <div class="logo">The Coffee Shop</div>
@@ -241,5 +321,18 @@
         <p>Crafted with ☕ & ❤️</p>
       </div>
     </footer>
+
+    <script>
+      // After page loads, hide preloader with style
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        preloader.classList.add("hide");
+
+        // Add a little celebration effect
+        setTimeout(function () {
+          preloader.style.display = "none";
+        }, 2200);
+      });
+    </script>
   </body>
 </html>
