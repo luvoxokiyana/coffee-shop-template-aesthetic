@@ -921,6 +921,330 @@ nav {
     40% { transform: scale(1); opacity: 1; }
 }
 
+
+/* ----- MENU PAGE ----- */
+
+/* Menu Hero */
+.menu-hero {
+    padding: 10rem 2rem 4rem 2rem;
+    background: 
+        linear-gradient(rgba(26, 20, 16, 0.6), rgba(26, 20, 16, 0.6)),
+        url(/assets/images/hero-bg.jfif);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-top: 0;
+}
+
+.menu-hero-content h1 {
+    font-family: "Rubik Bubbles", system-ui;
+    font-size: 4rem;
+    color: var(--off-white);
+    margin-bottom: 0.5rem;
+}
+
+.menu-hero-content p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--pale-gray);
+    margin-bottom: 1.5rem;
+}
+
+.menu-hero-line {
+    width: 80px;
+    height: 3px;
+    background: var(--off-white);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Category Tabs */
+.menu-categories {
+    background: var(--paper);
+    padding: 2rem 1rem;
+    border-bottom: 1px solid var(--light-gray);
+    position: sticky;
+    top: 72px;
+    z-index: 100;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.category-btn {
+    padding: 10px 24px;
+    background: transparent;
+    border: 2px solid var(--mid-gray);
+    border-radius: 50px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--mid-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.category-btn:hover {
+    border-color: var(--dark-charcoal);
+    color: var(--dark-charcoal);
+}
+
+.category-btn.active {
+    background: var(--dark-charcoal);
+    border-color: var(--dark-charcoal);
+    color: var(--off-white);
+}
+
+/* Menu Grid */
+.menu-grid-section {
+    background: var(--off-white);
+    padding: 4rem 2rem 6rem;
+}
+
+.menu-grid-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu-category {
+    margin-bottom: 3.5rem;
+    display: block;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.menu-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--pale-gray);
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--pale-gray);
+}
+
+.menu-item:hover {
+    background: var(--cream);
+    transform: translateX(5px);
+}
+
+.menu-item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 0.2rem;
+}
+
+.item-desc {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    color: var(--mid-gray);
+}
+
+.menu-item-price {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--dark-charcoal);
+    padding-left: 1rem;
+    white-space: nowrap;
+}
+
+/* Special badge for popular items */
+.menu-item.popular .item-name::after {
+    content: ' ★';
+    color: var(--warm-gray);
+    font-size: 0.8rem;
+}
+
+/* Menu CTA */
+.menu-cta {
+    background: var(--paper);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.menu-cta-content h2 {
+    font-family: "Rubik Bubbles", system-ui;
+    font-size: 2.5rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.menu-cta-content p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: var(--warm-gray);
+    margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+    padding: 14px 40px;
+    background: var(--dark-charcoal);
+    color: var(--off-white);
+    border: none;
+    border-radius: 50px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: var(--soft-black);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Active nav link */
+.nav-links a.active {
+    color: var(--dark-charcoal);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* ----- RESPONSIVE MENU ----- */
+@media (max-width: 768px) {
+    .menu-hero {
+        padding: 8rem 1.5rem 3rem;
+    }
+
+    .menu-hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .menu-hero-content p {
+        font-size: 1rem;
+    }
+
+    .menu-categories {
+        top: 68px;
+        padding: 1.2rem 0.8rem;
+    }
+
+    .category-btn {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+
+    .menu-grid-section {
+        padding: 2.5rem 1.2rem 4rem;
+    }
+
+    .category-title {
+        font-size: 1.6rem;
+    }
+
+    .menu-item {
+        padding: 0.8rem 0.8rem;
+        flex-wrap: wrap;
+    }
+
+    .item-name {
+        font-size: 1rem;
+    }
+
+    .item-desc {
+        font-size: 0.8rem;
+    }
+
+    .menu-item-price {
+        font-size: 1rem;
+    }
+
+    .menu-cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .menu-cta-content p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        padding: 12px 32px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .category-tabs {
+        gap: 0.5rem;
+    }
+
+    .category-btn {
+        padding: 6px 14px;
+        font-size: 0.65rem;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .menu-item-price {
+        padding-left: 0;
+        font-size: 0.95rem;
+    }
+
+    .menu-cta-content h2 {
+        font-size: 1.6rem;
+    }
+}
+
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */

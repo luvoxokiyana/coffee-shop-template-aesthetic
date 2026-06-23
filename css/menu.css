@@ -1,0 +1,639 @@
+/* ========================================
+   MENU.CSS - Visual Menu Styles
+   ======================================== */
+
+/* ----- MENU HERO ----- */
+.menu-hero {
+  padding: 10rem 2rem 4rem 2rem;
+  background:
+    linear-gradient(rgba(26, 20, 16, 0.6), rgba(26, 20, 16, 0.6)),
+    url(/assets/images/hero-bg.jfif);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin-top: 0;
+}
+
+.menu-hero-content h1 {
+  font-family: "Rubik Bubbles", system-ui;
+  font-size: 4rem;
+  color: var(--off-white);
+  margin-bottom: 0.5rem;
+}
+
+.menu-hero-content p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--pale-gray);
+  margin-bottom: 1.5rem;
+}
+
+.menu-hero-line {
+  width: 80px;
+  height: 3px;
+  background: var(--off-white);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ----- CATEGORY TABS ----- */
+.menu-categories {
+  background: var(--paper);
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid var(--light-gray);
+  position: sticky;
+  top: 72px;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(240, 235, 224, 0.95);
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.category-btn {
+  padding: 8px 20px;
+  background: transparent;
+  border: 2px solid var(--mid-gray);
+  border-radius: 50px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--mid-gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.category-btn:hover {
+  border-color: var(--dark-charcoal);
+  color: var(--dark-charcoal);
+  transform: translateY(-2px);
+}
+
+.category-btn.active {
+  background: var(--dark-charcoal);
+  border-color: var(--dark-charcoal);
+  color: var(--off-white);
+  box-shadow: 0 4px 15px rgba(26, 20, 16, 0.2);
+}
+
+/* ----- VISUAL MENU GRID ----- */
+.menu-grid-section {
+  background: var(--off-white);
+  padding: 3rem 2rem 5rem;
+}
+
+.menu-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-category {
+  margin-bottom: 3.5rem;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.menu-category:last-child {
+  margin-bottom: 0;
+}
+
+.category-title {
+  font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--dark-charcoal);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--pale-gray);
+}
+
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ----- MENU CARD ----- */
+.menu-card {
+  background: var(--paper);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid var(--pale-gray);
+  cursor: pointer;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(26, 20, 16, 0.12);
+  border-color: var(--light-gray);
+}
+
+.menu-card:active {
+  transform: scale(0.97);
+}
+
+.menu-card-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.menu-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-card-image img {
+  transform: scale(1.05);
+}
+
+.menu-card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 14px;
+  background: var(--dark-charcoal);
+  color: var(--off-white);
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+  background: rgba(26, 20, 16, 0.85);
+}
+
+.menu-card-content {
+  padding: 1rem 1.2rem 1.2rem;
+}
+
+.menu-card-name {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--dark-charcoal);
+  margin-bottom: 0.2rem;
+}
+
+.menu-card-desc {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: var(--mid-gray);
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.menu-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-card-price {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--dark-charcoal);
+}
+
+.menu-card-add {
+  width: 36px;
+  height: 36px;
+  background: var(--dark-charcoal);
+  color: var(--off-white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.menu-card-add:hover {
+  background: var(--soft-black);
+  transform: scale(1.1);
+}
+
+.menu-card-add:active {
+  transform: scale(0.9);
+}
+
+/* ----- MENU CTA ----- */
+.menu-cta {
+  background: var(--paper);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--light-gray);
+}
+
+.menu-cta-content h2 {
+  font-family: "Rubik Bubbles", system-ui;
+  font-size: 2.5rem;
+  color: var(--dark-charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.menu-cta-content p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: var(--warm-gray);
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  padding: 14px 40px;
+  background: var(--dark-charcoal);
+  color: var(--off-white);
+  border: none;
+  border-radius: 50px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: var(--soft-black);
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- ACTIVE NAV LINK ----- */
+.nav-links a.active {
+  color: var(--dark-charcoal);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ----- ANIMATIONS ----- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----- MENU MODAL ----- */
+.menu-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.menu-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.menu-modal-content {
+  position: relative;
+  background: var(--off-white);
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  overflow: hidden;
+  transform: scale(0.9) translateY(20px);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.menu-modal.active .menu-modal-content {
+  transform: scale(1) translateY(0);
+}
+
+.menu-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.menu-modal-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: rotate(90deg);
+}
+
+.menu-modal-image {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.menu-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-modal-info {
+  padding: 1.5rem 2rem 2rem;
+}
+
+.menu-modal-name {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--dark-charcoal);
+  margin-bottom: 0.3rem;
+}
+
+.menu-modal-desc {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--warm-gray);
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.menu-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-modal-price {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--dark-charcoal);
+}
+
+.menu-modal-add {
+  padding: 12px 32px;
+  background: var(--dark-charcoal);
+  color: var(--off-white);
+  border: none;
+  border-radius: 50px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-modal-add:hover {
+  background: var(--soft-black);
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .menu-modal-content {
+    width: 95%;
+  }
+
+  .menu-modal-image {
+    height: 200px;
+  }
+
+  .menu-modal-info {
+    padding: 1.2rem 1.2rem 1.5rem;
+  }
+
+  .menu-modal-name {
+    font-size: 1.3rem;
+  }
+
+  .menu-modal-desc {
+    font-size: 0.9rem;
+  }
+
+  .menu-modal-price {
+    font-size: 1.3rem;
+  }
+
+  .menu-modal-add {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MENU
+   ======================================== */
+@media (max-width: 1024px) {
+  .menu-items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-hero {
+    padding: 8rem 1.5rem 3rem;
+  }
+
+  .menu-hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .menu-hero-content p {
+    font-size: 1rem;
+  }
+
+  .menu-categories {
+    top: 68px;
+    padding: 1rem 0.8rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-tabs {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    padding: 0 0.5rem;
+  }
+
+  .category-btn {
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .menu-grid-section {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .menu-items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .category-title {
+    font-size: 1.6rem;
+  }
+
+  .menu-card-image {
+    height: 160px;
+  }
+
+  .menu-card-content {
+    padding: 0.8rem 1rem 1rem;
+  }
+
+  .menu-card-name {
+    font-size: 1rem;
+  }
+
+  .menu-card-desc {
+    font-size: 0.75rem;
+  }
+
+  .menu-card-price {
+    font-size: 1rem;
+  }
+
+  .menu-card-add {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .menu-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .menu-cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 12px 32px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .menu-items-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .menu-card-image {
+    height: 140px;
+  }
+
+  .menu-card-badge {
+    font-size: 0.55rem;
+    padding: 3px 10px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .menu-card-name {
+    font-size: 0.9rem;
+  }
+
+  .menu-card-desc {
+    display: none;
+  }
+
+  .menu-card-price {
+    font-size: 0.9rem;
+  }
+
+  .menu-card-add {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+
+  .menu-cta-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .category-btn {
+    font-size: 0.65rem;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .menu-items-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .menu-card-image {
+    height: 110px;
+  }
+
+  .menu-card-content {
+    padding: 0.6rem 0.6rem 0.8rem;
+  }
+
+  .menu-card-name {
+    font-size: 0.8rem;
+  }
+
+  .menu-card-price {
+    font-size: 0.8rem;
+  }
+
+  .menu-card-add {
+    width: 24px;
+    height: 24px;
+    font-size: 0.6rem;
+  }
+}

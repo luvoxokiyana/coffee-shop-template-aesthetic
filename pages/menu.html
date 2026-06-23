@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - The Coffee Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">The Coffee Shop</div>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="#">Events</a>
+        <a href="#">Coffee</a>
+      </div>
+      <div class="nav-cta">
+        <button>Order Now</button>
+      </div>
+    </nav>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero">
+      <div class="menu-hero-content">
+        <h1>Our Menu</h1>
+        <p>Crafted with love, served with a smile</p>
+        <div class="menu-hero-line"></div>
+      </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-categories">
+      <div class="category-tabs">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="coffee">☕ Coffee</button>
+        <button class="category-btn" data-category="tea">🍵 Tea</button>
+        <button class="category-btn" data-category="cold">🧊 Cold</button>
+        <button class="category-btn" data-category="pastry">🥐 Pastries</button>
+      </div>
+    </section>
+    <!-- Change to Recieve inputs from script/db (This is just a visual representation)-->
+    <!-- Visual Menu Grid -->
+    <section class="menu-grid-section">
+      <div class="menu-grid-container">
+        
+        <!-- Coffee Items -->
+        <div class="menu-category" data-category="coffee">
+          <h2 class="category-title">☕ Hot Coffee</h2>
+          <div class="menu-items-grid">
+            
+            <!-- Item 1 -->
+            <div class="menu-card" data-name="Espresso" data-price="4.00">
+              <div class="menu-card-image">
+                <img src="/assets/images/espresso.jfif" alt="Espresso" />
+                <div class="menu-card-badge">Popular</div>
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Espresso</h3>
+                <p class="menu-card-desc">Rich, bold, and perfectly extracted</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$4.00</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="menu-card" data-name="Americano" data-price="4.50">
+              <div class="menu-card-image">
+                <img src="/assets/images/americano.jfif" alt="Americano" />
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Americano</h3>
+                <p class="menu-card-desc">Smooth &amp; balanced</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$4.50</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="menu-card" data-name="Flat White" data-price="5.00">
+              <div class="menu-card-image">
+                <img src="/assets/images/flat-white.jfif" alt="Flat White" />
+                <div class="menu-card-badge">Barista's Pick</div>
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Flat White</h3>
+                <p class="menu-card-desc">Velvety milk meets bold espresso</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$5.00</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="menu-card" data-name="Cappuccino" data-price="5.50">
+              <div class="menu-card-image">
+                <img src="/assets/images/cappuccino.jfif" alt="Cappuccino" />
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Cappuccino</h3>
+                <p class="menu-card-desc">Espresso with frothy foam</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$5.50</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="menu-card" data-name="Latte" data-price="5.50">
+              <div class="menu-card-image">
+                <img src="/assets/images/latte.jfif" alt="Latte" />
+                <div class="menu-card-badge">Bestseller</div>
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Latte</h3>
+                <p class="menu-card-desc">Creamy steamed milk &amp; espresso</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$5.50</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="menu-card" data-name="Mocha" data-price="6.00">
+              <div class="menu-card-image">
+                <img src="/assets/images/mocha.jfif" alt="Mocha" />
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Mocha</h3>
+                <p class="menu-card-desc">Espresso &amp; chocolate perfection</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$6.00</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tea Items -->
+        <div class="menu-category" data-category="tea">
+          <h2 class="category-title">🍵 Tea &amp; More</h2>
+          <div class="menu-items-grid">
+            <div class="menu-card" data-name="Matcha Latte" data-price="6.00">
+              <div class="menu-card-image">
+                <img src="/assets/images/matcha.jfif" alt="Matcha Latte" />
+                <div class="menu-card-badge">Popular</div>
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Matcha Latte</h3>
+                <p class="menu-card-desc">Ceremonial grade matcha</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$6.00</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card" data-name="Chai Latte" data-price="5.50">
+              <div class="menu-card-image">
+                <img src="/assets/images/chai.jfif" alt="Chai Latte" />
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Chai Latte</h3>
+                <p class="menu-card-desc">Spiced black tea with milk</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$5.50</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cold Items -->
+        <div class="menu-category" data-category="cold">
+          <h2 class="category-title">🧊 Cold Brew &amp; Iced</h2>
+          <div class="menu-items-grid">
+            <div class="menu-card" data-name="Cold Brew" data-price="5.50">
+              <div class="menu-card-image">
+                <img src="/assets/images/cold-brew.jfif" alt="Cold Brew" />
+                <div class="menu-card-badge">Seasonal</div>
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Cold Brew</h3>
+                <p class="menu-card-desc">Steeped 24 hours, smooth &amp; refreshing</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$5.50</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card" data-name="Iced Latte" data-price="5.50">
+              <div class="menu-card-image">
+                <img src="/assets/images/iced-latte.jfif" alt="Iced Latte" />
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Iced Latte</h3>
+                <p class="menu-card-desc">Espresso over ice with milk</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$5.50</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card" data-name="Nitro Cold Brew" data-price="6.50">
+              <div class="menu-card-image">
+                <img src="/assets/images/nitro.jfif" alt="Nitro Cold Brew" />
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Nitro Cold Brew</h3>
+                <p class="menu-card-desc">Nitrogen-infused, creamy &amp; smooth</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$6.50</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card" data-name="Strawberry Latte" data-price="6.00">
+              <div class="menu-card-image">
+                <img src="/assets/images/strawberry-latte.jfif" alt="Strawberry Latte" />
+                <div class="menu-card-badge">Bestseller</div>
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Strawberry Latte</h3>
+                <p class="menu-card-desc">Sweet strawberry milk with espresso</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$6.00</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pastries -->
+        <div class="menu-category" data-category="pastry">
+          <h2 class="category-title">🥐 Pastries &amp; Treats</h2>
+          <div class="menu-items-grid">
+            <div class="menu-card" data-name="Butter Croissant" data-price="4.50">
+              <div class="menu-card-image">
+                <img src="/assets/images/croissant.jfif" alt="Butter Croissant" />
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Butter Croissant</h3>
+                <p class="menu-card-desc">Flaky, golden, perfectly buttery</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$4.50</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card" data-name="Cinnamon Roll" data-price="5.50">
+              <div class="menu-card-image">
+                <img src="/assets/images/cinnamon-roll.jfif" alt="Cinnamon Roll" />
+                <div class="menu-card-badge">Popular</div>
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Cinnamon Roll</h3>
+                <p class="menu-card-desc">Swirled with cream cheese glaze</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$5.50</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card" data-name="Chocolate Chip Cookie" data-price="3.50">
+              <div class="menu-card-image">
+                <img src="/assets/images/cookie.jfif" alt="Chocolate Chip Cookie" />
+              </div>
+              <div class="menu-card-content">
+                <h3 class="menu-card-name">Chocolate Chip Cookie</h3>
+                <p class="menu-card-desc">Chewy, gooey, loaded with chocolate</p>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">$3.50</span>
+                  <button class="menu-card-add"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu CTA -->
+    <section class="menu-cta">
+      <div class="menu-cta-content">
+        <h2>Can't decide?</h2>
+        <p>Let us surprise you with our barista's choice</p>
+        <button class="cta-btn">Surprise Me ☕</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="footer-logo">The Coffee Shop</div>
+          <p>Life's too short for bad coffee.<br />Let's fix that.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#">Home</a>
+          <a href="#">Menu</a>
+          <a href="#">Events</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-hours">
+          <h4>Opening Hours</h4>
+          <p><span>Mon – Fri:</span> 6:30 AM – 6:00 PM</p>
+          <p><span>Sat:</span> 7:30 AM – 7:00 PM</p>
+          <p><span>Sun:</span> 8:00 AM – 5:00 PM</p>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Coffee Shop. All rights reserved.</p>
+        <p>Crafted with ☕ & ❤️</p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
